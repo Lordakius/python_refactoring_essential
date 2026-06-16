@@ -29,3 +29,33 @@ class ShippingApp:
 
 if __name__ == "__main__":
     ShippingApp.main()
+
+    # == == == == == == == == == == == == == ==
+    # Running
+    # order
+    # ID: 1001
+    # == == == == == == == == == == == == == ==
+    # Order
+    # ID: 1001
+    # Shipping
+    # cost: 2.5
+    #
+    # == == == == == == == == == == == == == ==
+    # Running
+    # order
+    # ID: 1002
+    # == == == == == == == == == == == == == ==
+    # Order
+    # ID: 1002
+    # Shipping
+    # cost: 36.8
+    #
+    # == == == == == == == == == == == == == ==
+    # Running
+    # order
+    # ID: 1003
+    # == == == == == == == == == == == == == ==
+    # Order
+    # ID: 1003
+    # Shipping
+    # cost: 27.4
