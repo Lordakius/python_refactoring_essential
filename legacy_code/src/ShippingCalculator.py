@@ -24,20 +24,18 @@ class ShippingCalculator:
 
     def apply_shipping(self, order: Order) -> float:
 
-        if order.shippingType == "STANDARD":
-            return order.weightKg * 0.5
+        match order.shippingType :
+            case "STANDARD" :
+                return order.weightKg * 0.5
+            case "EXPRESS" :
+                return order.weightKg * 0.8 + order.distanceKm * 0.1
+            case "OVERNIGHT":
+                return order.weightKg * 1.2 + 25
+            case "INTERNATIONAL":
+                return order.weightKg * 1.5
+            case _ :
+                raise RuntimeError(f"Unknown shipping type: {order.shippingType}")
 
-        elif order.shippingType == "EXPRESS":
-            return order.weightKg * 0.8 + order.distanceKm * 0.1
-
-        elif order.shippingType == "OVERNIGHT":
-            return order.weightKg * 1.2 + 25
-
-        elif order.shippingType == "INTERNATIONAL":
-            return order.weightKg * 1.5
-
-        else:
-            raise RuntimeError(f"Unknown shipping type: {order.shippingType}")
 
     def get_order(self, order_id: int) -> Order:
         url = f"https://codemanship.co.uk/api/orders.php?orderId={order_id}"
