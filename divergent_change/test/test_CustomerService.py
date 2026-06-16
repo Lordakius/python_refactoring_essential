@@ -39,6 +39,7 @@ class TestCustomerService(unittest.TestCase):
 
     def test_format_display_name_trims_and_uppercases_last_name(self):
         result = self.service.format_display_name(" John ", " smith ")
+
         self.assertEqual("John SMITH", result)
 
     def test_format_display_name_handles_empty_strings(self):
