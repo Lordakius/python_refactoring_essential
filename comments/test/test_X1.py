@@ -6,24 +6,24 @@ from comments.src.X1 import X1
 class TestX1(unittest.TestCase):
 
     def test_n_basic(self):
-        self.assertEqual(X1.n(0), 0)
-        self.assertEqual(X1.n(2), 4)
-        self.assertEqual(X1.n(-3), 9)
+        self.assertEqual(X1.square_of(0), 0)
+        self.assertEqual(X1.square_of(2), 4)
+        self.assertEqual(X1.square_of(-3), 9)
 
     def test_m_single_value(self):
-        self.assertEqual(X1.m(3, 3), 9)
+        self.assertEqual(X1.sum_of_squares(3, 3), 9)
 
     def test_m_small_range(self):
-        self.assertEqual(X1.m(1, 3), 14)
+        self.assertEqual(X1.sum_of_squares(1, 3), 14)
 
     def test_m_larger_range(self):
-        self.assertEqual(X1.m(0, 3), 14)
+        self.assertEqual(X1.sum_of_squares(0, 3), 14)
 
     def test_m_negative_range(self):
-        self.assertEqual(X1.m(-2, 0), 5)
+        self.assertEqual(X1.sum_of_squares(-2, 0), 5)
 
     def test_m_larger_negative_to_positive(self):
-        self.assertEqual(X1.m(-1, 1), 2)
+        self.assertEqual(X1.sum_of_squares(-1, 1), 2)
 
 
 if __name__ == "__main__":
